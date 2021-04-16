@@ -2,7 +2,7 @@ from Bio.Seq import Seq
 from Bio.Blast import NCBIWWW, NCBIXML
 
 
-def prot_options(new_seq):
+def aa_options(new_seq):
     # maybe a blast?
     prot_seq = Seq(new_seq.upper())
     
@@ -10,7 +10,7 @@ def prot_options(new_seq):
     blast_records = NCBIXML.parse(blasted)
 
 
-    threshold = 1e-50
+    threshold = 1e-30
     for record in blast_records:
         if record.alignments:
             print(f"\nQuery: {record.query[:100]}\n")
