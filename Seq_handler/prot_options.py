@@ -22,4 +22,4 @@ def prot_options(new_seq):
                         print(f"score: {hsp.score}")
                         print(">\n")
 
-
+print("")
