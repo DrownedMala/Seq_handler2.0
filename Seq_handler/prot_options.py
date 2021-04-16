@@ -22,5 +22,3 @@ def prot_options(new_seq):
                         print(">\n")
 
 
-new_seq = input("sequenza: ")
-prot_options(new_seq)
