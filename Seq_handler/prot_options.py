@@ -9,3 +9,4 @@ def prot_options(new_seq):
     #prot_seq = Seq(new_seq.upper())
 
 prot_options(new_seq)
+print("Ciao uaglio'")
