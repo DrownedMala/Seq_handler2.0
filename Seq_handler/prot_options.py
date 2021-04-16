@@ -20,3 +20,7 @@ def prot_options(new_seq):
                         print(f"match: {align.title[:100]}")
                         print(f"score: {hsp.score}")
                         print(">\n")
+
+
+new_seq = input("sequenza: ")
+prot_options(new_seq)
