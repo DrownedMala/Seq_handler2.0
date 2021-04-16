@@ -6,3 +6,4 @@ def prot_options(new_seq):
     # maybe a blast?
     prot_seq = Seq(new_seq.upper())
 
+print("ciao")
