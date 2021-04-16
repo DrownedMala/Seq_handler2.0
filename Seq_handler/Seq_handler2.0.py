@@ -1,8 +1,8 @@
 
 # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec24
 
-from seqs_options import dna_options, rna_options
-# import prot_options
+from seqs_options import dna_options, rna_options  # contengono trascrizione, traduzione, trascrizione inversa, gc content
+from prot_options import aa_options  # contiene blast per ora
 from Bio.Seq import Seq
 from Bio.SeqUtils import GC
 
@@ -21,7 +21,7 @@ aa_only_letter = ("L", "M", "F", "W", "K", "Q", "E", "S", "P", "V", "I", "Y", "H
 if len(new_seq) > 15:                               
     for i in new_seq.upper():
         if i in aa_only_letter:
-           print("prot_options(new_seq)")                  # definire una funzione per le opzioni aminoacidi
+           aa_options(new_seq)                  # definire una funzione per le opzioni aminoacidi
            break
         elif i == "U": 
             rna_options(new_seq)
@@ -35,7 +35,7 @@ else:
     which_seq_type = input("Which type of seq did you input? \n[AA, RNA, DNA]--> ")
     
     if which_seq_type.lower() == 'aa' or which_seq_type == '1':
-        print("prot_options(new_seq)")
+        aa_options(new_seq)
     elif which_seq_type.lower() == 'rna' or which_seq_type == '2': 
         rna_options(new_seq)
     elif which_seq_type.lower() == 'dna' or which_seq_type == '3':
