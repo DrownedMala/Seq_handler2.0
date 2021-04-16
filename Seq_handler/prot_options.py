@@ -5,9 +5,10 @@ from Bio.Blast import NCBIWWW, NCBIXML
 def prot_options(new_seq):
     # maybe a blast?
     prot_seq = Seq(new_seq.upper())
-
+    
     blasted = NCBIWWW.qblast("blastp", "nr", prot_seq)
     blast_records = NCBIXML.parse(blasted)
+
 
     threshold = 1e-50
     for record in blast_records:
