@@ -16,7 +16,7 @@ aa_only_letter = ("L", "M", "F", "W", "K", "Q", "E", "S", "P", "V", "I", "Y", "H
 
 
 # se abbiamo una sequenza abbastanza lunga dovrebbe essere possibile dedurne il tipo dalla sua composizione di 
-# lettere, senza considerare la possibilità che siano solo ATCG e siano aminoacidi
+# lettere, senza considerare la possibilità che siano solo ATCG e siano amminoacidi
 # ↓
 if len(new_seq) > 15:                               
     for i in new_seq.upper():
