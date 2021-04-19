@@ -1,6 +1,7 @@
 from Bio.Seq import Seq
 from Bio.Blast import NCBIWWW, NCBIXML
 
+# malwmrllpllallalwgpdpaaafvnqhlcgshlvealylvcgergffytpktrreaedlqvgqvelgggpgagslqplalegslqkrgiveqcctsicslyqlenycn
 
 def aa_options(new_seq):
     # maybe a blast?
@@ -17,8 +18,6 @@ def aa_options(new_seq):
             for align in record.alignments:
                 for hsp in align.hsps:
                     if hsp.expect < threshold:
-                        print(">")
                         print(f"match: {align.title[:100]}")
                         print(f"score: {hsp.score}")
                         print(">\n")
-
