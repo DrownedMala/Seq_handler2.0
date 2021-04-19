@@ -1,0 +1,4 @@
+.vscode/*
+
+seq_handler/.vscode/*
+seq_handler/__pycache__/*
