@@ -2,7 +2,7 @@
 # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec24
 
 from seqs_options import dna_options, rna_options  # contengono trascrizione, traduzione, trascrizione inversa, gc content
-from prot_options import aa_options  # contiene blast per ora
+from prot_options import aa_options                # contiene blast per ora
 from Bio.Seq import Seq
 from Bio.SeqUtils import GC
 
