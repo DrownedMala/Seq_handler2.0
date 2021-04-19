@@ -3,7 +3,7 @@ from Bio.Seq import Seq
 from Bio.SeqUtils import GC
 
 # Raccoglie le opzioni disponibili per la gestione di sequenze di DNA ed RNA.
-
+ 
 def dna_options(new_seq):
     dna_seq = Seq(new_seq).upper()
     what_next = ""
