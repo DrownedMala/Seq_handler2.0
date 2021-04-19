@@ -5,7 +5,7 @@ import os, os.path
 from Bio import SeqIO
 
 
-#def Parse_and_write():
+#def Parse_and_write(path):
 # controlla l'esistenza del file in input, da splittare in seguito ↓
 isFile = False 
 path = input("Insert you FASTA file's path: ") 
