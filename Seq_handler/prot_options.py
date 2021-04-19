@@ -11,7 +11,7 @@ def aa_options(new_seq):
     blast_records = NCBIXML.parse(blasted)
 
 
-    threshold = 1e-30
+    threshold = 1e-40
     for record in blast_records:
         if record.alignments:
             print(f"\nQuery: {record.query[:100]}\n")
