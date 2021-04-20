@@ -52,7 +52,8 @@ elif "\\" in new_str or "/" in new_str:
     while os.path.exists(new_str) == False: # controlla il percorso
         new_str = input("It seems you tried to work on a file. Check its path and retry. \n>>> ")
     
-    what_now = input(f"""Your file is {os.path.basename(os.path.normpath(new_str))}; what do you want to do now?\n
+    what_now = input(f"""\nYour file is \"{os.path.basename(os.path.normpath(new_str))}\"; 
+                    What do you want to do now?\n
                     1) Split a multi-fasta in single fasta files\n
                     2) --- \n
                     >>> """)
