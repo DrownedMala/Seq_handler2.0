@@ -4,8 +4,8 @@ from Bio.SeqUtils import GC
 
 # Raccoglie le opzioni disponibili per la gestione di sequenze di DNA ed RNA.
  
-def dna_options(new_seq):
-    dna_seq = Seq(new_seq).upper()
+def dna_options(new_str):
+    dna_seq = Seq(new_str).upper()
     what_next = ""
     ok_input = ("1", "2", "3")
     while what_next == "" or what_next not in ok_input:

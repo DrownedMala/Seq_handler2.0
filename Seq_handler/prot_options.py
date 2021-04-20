@@ -2,9 +2,9 @@ from Bio.Seq import Seq
 from Bio.Blast import NCBIWWW, NCBIXML
 
 #prende in input la sequenza data nel main ed esegue un blast, restituisce titolo del risultato e score
-def aa_options(new_seq):        
+def aa_options(new_str):        
     # maybe a blast?
-    prot_seq = Seq(new_seq.upper())
+    prot_seq = Seq(new_str.upper())
     
     blasted = NCBIWWW.qblast("blastp", "nr", prot_seq)
     blast_records = NCBIXML.parse(blasted)
