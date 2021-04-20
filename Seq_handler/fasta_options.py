@@ -6,7 +6,7 @@ from Bio import SeqIO
 # e lo divide un record/file
 
 
-def splitter(new_str):
+def fasta_splitter(new_str):
 
     # crea cartella di destinazione per i file divisi nella cwd ↓
     wd = f"{os.getcwd()}/Split_{os.path.basename(os.path.normpath(new_str))}" # assegna il nome del file originale anche alla cartella

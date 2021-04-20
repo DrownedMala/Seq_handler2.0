@@ -1,7 +1,7 @@
 
 # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec24
 
-from fasta_options import splitter
+from fasta_options import fasta_splitter
 from seqs_options import dna_options, rna_options  # contengono trascrizione, traduzione, trascrizione inversa, gc content
 from prot_options import aa_options                # contiene blast per ora
 from Bio.Seq import Seq
@@ -9,8 +9,8 @@ from Bio.SeqUtils import GC
 import os.path
 
 
-
-# tolti gli aminoacidi che corrispondono a 'ACTG'
+# tolti gli aminoacidi che corrispondono a 'ACTG', queste sono le lettere che servono al programma 
+# per decidere se la sequenza sia amminoacidica o nucleotidica
 aa_only_letter = ("L", "M", "F", "W", "K", "Q", "E", "S", "P", "V", "I", "Y", "H", "R", "N", "D")
 
 
@@ -50,7 +50,7 @@ if "\\" not in new_str and "/" not in new_str:
 #controlla che la stringa passata sia un percorso esistente per un file
 elif "\\" in new_str or "/" in new_str:
     while os.path.exists(new_str) == False: # controlla il percorso
-        new_str = input("It seems you tried to work on a file. Check its path and retry. \n>>> ")
+        new_str = input("It seems you tried to work on a file, but the path isn't correct. Check it and retry. \n>>> ")
     
     what_now = input(f"""\nYour file is \"{os.path.basename(os.path.normpath(new_str))}\"; 
                     What do you want to do now?\n
@@ -59,7 +59,7 @@ elif "\\" in new_str or "/" in new_str:
                     >>> """)
     
     if what_now == "1" or what_now.lower() == "split":
-        splitter(new_str)
+        fasta_splitter(new_str)
     
 
 
