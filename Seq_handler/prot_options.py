@@ -1,9 +1,8 @@
 from Bio.Seq import Seq
 from Bio.Blast import NCBIWWW, NCBIXML
 
-# malwmrllpllallalwgpdpaaafvnqhlcgshlvealylvcgergffytpktrreaedlqvgqvelgggpgagslqplalegslqkrgiveqcctsicslyqlenycn
-
-def aa_options(new_seq):
+#prende in input la sequenza data nel main ed esegue un blast, restituisce titolo del risultato e score
+def aa_options(new_seq):        
     # maybe a blast?
     prot_seq = Seq(new_seq.upper())
     
