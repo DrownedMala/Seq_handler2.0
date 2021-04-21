@@ -17,8 +17,8 @@ def aa_options(new_str):
         prot_seq = Seq(new_str.upper())
         
         
-        blasted = NCBIWWW.qblast("blastp", "nr", prot_seq)
-        blast_records = NCBIXML.parse(blasted)
+        blasting = NCBIWWW.qblast("blastp", "nr", prot_seq)
+        blast_records = NCBIXML.parse(blasting)
 
 
         threshold = 1e-40
