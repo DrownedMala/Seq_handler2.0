@@ -1,7 +1,7 @@
 
 # http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec24
 
-from fasta_options import fasta_splitter
+from files_options import fasta_splitter, gbk_splitter
 from seqs_options import dna_options, rna_options  # contengono trascrizione, traduzione, trascrizione inversa, gc content
 from prot_options import aa_options                # contiene blast per ora
 from Bio.Seq import Seq
