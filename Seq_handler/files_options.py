@@ -2,8 +2,8 @@
 import os, os.path
 from Bio import SeqIO
 
-# Programma che prende un file fasta con più record
-# e lo divide un record/file
+# Programma che prende un file fasta/gbk con più record
+# e lo divide in un record per ogni file
 
 
 def fasta_splitter(new_str):
@@ -51,4 +51,5 @@ def gbk_splitter(new_str):
 
 
 
-# /home/mala/Progr_learning/Python/DataAnalysis/Pandas/ls_orchid.fasta    
+# /home/mala/Coding/Python/DataAnalysis/Pandas/ls_orchid.fasta    
+# /home/mala/Coding/Python/DataAnalysis/Pandas/ls_orchid.gbk
