@@ -1,8 +1,8 @@
 from Bio.Seq import Seq
 from Bio.Blast import NCBIWWW, NCBIXML
 
-# prende in input la sequenza data nel main ed esegue un blast, 
-# restituisce titolo del risultato e score
+# takes in input the seq coming from the main code and executes a blast, 
+# returns title of the result and e-value
 
 def aa_options(new_str):        
     
@@ -33,6 +33,8 @@ def aa_options(new_str):
                             print("")
 
 
+
+# a seq to try it 
 # MKWVTFISLLFLFSSAYSRGVFRRDAHKSEVAHRFKDLGEENFKALVLIAFAQYLQQCPFEDHVKLVNEV
 # TEFAKTCVADESAENCDKSLHTLFGDKLCTVATLRETYGEMADCCAKQEPERNECFLQHKDDNPNLPRLV
 # RPEVDVMCTAFHDNEETFLKKYLYEIARRHPYFYAPELLFFAKRYKAAFTECCQAADKAACLLPKLDELR
