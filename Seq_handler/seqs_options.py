@@ -3,7 +3,7 @@ from Bio.Seq import Seq
 from Bio.SeqUtils import GC
 from Bio.Blast import NCBIWWW, NCBIXML
 
-# Raccoglie le opzioni disponibili per la gestione di sequenze di DNA ed RNA.
+# gathers options for DNA/RNA seqs.
  
 def dna_options(new_str):
     dna_seq = Seq(new_str).upper()
@@ -27,16 +27,16 @@ def dna_options(new_str):
                 print(f"\nTemplateSeq Transcribed (as 5'→3'): {dna_seq.reverse_complement().transcribe()}\n")
 
         elif what_next == '2':
-            which_org = input("\nIs it 1)human or 2)mitochondrial dna? (1/2) >>> ")   # dna mitocondriale o umano?
-            if which_org == '1':                                                      # è necessario per sapere quale 
-                cds = input("\nIs it a CDS? (y/n) >>> ")                              # tabella di conversione usare
+            which_org = input("\nIs it 1)human or 2)mitochondrial dna? (1/2) >>> ")   # mito or human DNA?
+            if which_org == '1':                                                      # mandatory to know which
+                cds = input("\nIs it a CDS? (y/n) >>> ")                              # conversion table to use
                 if cds.lower() == 'y':  
                     print(f"Translated: {dna_seq.translate(to_stop=True)}\n")
                 elif cds.lower() == 'n':
                     print(f"Translated: {dna_seq.translate(to_stop=False)} \n(Any * is a stop codon)")
             elif which_org == '2':
-                cds = input("Is it a CDS? (y/n) >>> ")                              # se CDS si ferma al primo 
-                if cds.lower() == 'y':                                              # codone di stop
+                cds = input("Is it a CDS? (y/n) >>> ")                              # if CDS it stops at the first 
+                if cds.lower() == 'y':                                              # stop codon
                     print(f"Translated: {dna_seq.translate(table=2, to_stop=True)}\n")
                 elif cds.lower() == 'n':
                     print(f"Translated: {dna_seq.translate(table=2, to_stop=False)} \n(Any * is a stop codon)")
@@ -79,16 +79,16 @@ def rna_options(new_seq):
                             >>> """)
 
         if what_next == "1" or what_next.lower() == "translate":
-            which_org = input("\nIs it 1)human or 2)mitochondrial dna? (1/2) >>> ")   # dna mitocondriale o umano?
-            if which_org == '1':                                                      # è necessario per sapere quale 
-                cds = input("\nIs it a CDS? (y/n) >>> ")                              # tabella di conversione usare
+            which_org = input("\nIs it 1)human or 2)mitochondrial dna? (1/2) >>> ")   # mito or human RNA?
+            if which_org == '1':                                                      # mandatory to know which 
+                cds = input("\nIs it a CDS? (y/n) >>> ")                              # conversion table to use
                 if cds.lower() == 'y':  
                     print(f"Translated: {rna_seq.translate(to_stop=True)}\n")
                 elif cds.lower() == 'n':
                     print(f"Translated: {rna_seq.translate(to_stop=False)} \n(Any * is a stop codon)")
             elif which_org == '2':
-                cds = input("Is it a CDS? (y/n) >>> ")                              # se CDS si ferma al primo 
-                if cds.lower() == 'y':                                              # codone di stop
+                cds = input("Is it a CDS? (y/n) >>> ")                              # if CDS it stops at the first 
+                if cds.lower() == 'y':                                              # stop codon
                     print(f"Translated: {rna_seq.translate(table=2, to_stop=True)}\n")
                 elif cds.lower() == 'n':
                     print(f"Translated: {rna_seq.translate(table=2, to_stop=False)} \n(Any * is a stop codon)")
