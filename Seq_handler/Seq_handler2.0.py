@@ -15,7 +15,7 @@ aa_only_letter = ("L", "M", "F", "W", "K", "Q", "E", "S", "P", "V", "I", "Y", "H
 
 
 # starting input 
-new_str = input("Insert your sequence or the path to a file >>> ")
+new_str = input("Insert your sequence or the absolute path to a file >>> ")
 
 
 
